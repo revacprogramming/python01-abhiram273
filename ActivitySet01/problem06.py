@@ -1,16 +1,16 @@
-# Loops & Iterators
 
-largest = None
-smallest = None
-
+a=[]
 while True:
-    num = input("Enter a number? ")
+    try:
+        num=input("Enter a number: ")
+        if num == 'done':
+            break;
+        n = int(num)
+        a.append(n)
+        largest=max(a)
+        smallest=min(a)
+    except:
+        print ("Invalid input")
 
-    if num == "done":
-        break
-
-    # ...
-
-    print(num)
-
-print("Maximum", largest)
+print ("Maximum number is ", largest)
+print ("Minimum number is ", smallest)
